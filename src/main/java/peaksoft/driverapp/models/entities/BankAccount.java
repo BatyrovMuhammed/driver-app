@@ -19,6 +19,9 @@ public class BankAccount {
 
     private String fullName;
 
-    private BigDecimal bigDecimal;
+    private BigDecimal bigDecimal = new BigDecimal(0);
 
+    public void addMoney(BigDecimal money) {
+        this.bigDecimal = this.bigDecimal.add(money);
+    }
 }

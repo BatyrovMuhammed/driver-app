@@ -45,8 +45,7 @@ public class Driver {
     private AuthInfo authInfo;
 
     @OneToMany(mappedBy = "driver",
-            cascade = {MERGE, REFRESH, DETACH},
-            orphanRemoval = true)
+            cascade = {MERGE, REFRESH, DETACH})
     private List<Order> orders = new ArrayList<>();
 
     public String getEmail() {

@@ -4,12 +4,11 @@ import lombok.Getter;
 import lombok.Setter;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
+import peaksoft.driverapp.models.enums.Authority;
 
 import javax.persistence.*;
-import java.lang.annotation.Target;
 import java.util.Collection;
 import java.util.Collections;
-import java.util.HashSet;
 import java.util.UUID;
 
 /**

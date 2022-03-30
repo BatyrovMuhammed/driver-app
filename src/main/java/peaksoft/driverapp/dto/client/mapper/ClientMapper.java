@@ -5,7 +5,7 @@ import peaksoft.driverapp.dto.Converter;
 import peaksoft.driverapp.dto.client.ClientResponseDto;
 import peaksoft.driverapp.dto.client.ClientSaveDto;
 import peaksoft.driverapp.models.entities.AuthInfo;
-import peaksoft.driverapp.models.entities.Authority;
+import peaksoft.driverapp.models.enums.Authority;
 import peaksoft.driverapp.models.entities.BankAccount;
 import peaksoft.driverapp.models.entities.Client;
 

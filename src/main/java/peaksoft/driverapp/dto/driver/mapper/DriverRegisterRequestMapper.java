@@ -4,7 +4,7 @@ import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;
 import peaksoft.driverapp.dto.driver.DriverRequestDto;
 import peaksoft.driverapp.models.entities.AuthInfo;
-import peaksoft.driverapp.models.entities.Authority;
+import peaksoft.driverapp.models.enums.Authority;
 import peaksoft.driverapp.models.entities.Driver;
 
 /**

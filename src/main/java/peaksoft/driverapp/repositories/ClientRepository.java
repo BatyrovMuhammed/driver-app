@@ -3,6 +3,7 @@ package peaksoft.driverapp.repositories;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
+import peaksoft.driverapp.models.entities.BankAccount;
 import peaksoft.driverapp.models.entities.Client;
 
 import java.util.Optional;
@@ -22,4 +23,7 @@ public interface ClientRepository extends JpaRepository<Client, UUID> {
     Optional<Client> findByEmail(String email);
 
     Optional<Client> findByPhoneNumber(String phoneNumber);
+
+    @Query("select c.bankAccount from Client c where c.authInfo.email = ?1")
+    Optional<BankAccount> findBankAccountByClientEmail(String email);
 }

@@ -1,4 +1,4 @@
-package peaksoft.driverapp.models.entities;
+package peaksoft.driverapp.models.enums;
 
 import org.springframework.security.core.GrantedAuthority;
 
@@ -7,7 +7,8 @@ import org.springframework.security.core.GrantedAuthority;
  */
 public enum Authority implements GrantedAuthority {
     CLIENT,
-    DRIVER;
+    DRIVER,
+    ADMIN;
 
     @Override
     public String getAuthority() {

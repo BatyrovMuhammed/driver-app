@@ -4,15 +4,25 @@ import lombok.AllArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import peaksoft.driverapp.dto.bankaccount.BankAccountRequestDto;
+import peaksoft.driverapp.dto.bankaccount.BankAccountRequestResponse;
+import peaksoft.driverapp.dto.car.CarSaveRequestDto;
+import peaksoft.driverapp.dto.car.CarSaveRequestResponse;
 import peaksoft.driverapp.dto.driver.DriverRegisterResponseDto;
 import peaksoft.driverapp.dto.driver.DriverRequestDto;
 import peaksoft.driverapp.dto.driver.mapper.DriverRegisterRequestMapper;
 import peaksoft.driverapp.exceptions.BadRequestException;
+import peaksoft.driverapp.exceptions.NotFoundException;
+import peaksoft.driverapp.models.entities.BankAccount;
+import peaksoft.driverapp.models.entities.Car;
 import peaksoft.driverapp.models.entities.Driver;
 import peaksoft.driverapp.models.entities.DriverLicense;
 import peaksoft.driverapp.repositories.DriverRepository;
 
 import javax.mail.MessagingException;
+import javax.transaction.Transactional;
+import java.util.Map;
+import java.util.UUID;
 
 /**
  * @author Beksultan
@@ -54,8 +64,6 @@ public class DriverService {
 
         String driverEmail = savedDriver.getEmail();
 
-        System.out.println(driverEmail);
-
         String message = """
                 <p style="color: #6B8E23">
                     You have successfully registered to driver-app
@@ -63,9 +71,72 @@ public class DriverService {
                 <img src="https://images.pexels.com/photos/21696/pexels-photo.jpg?cs=srgb&dl=pexels-gerd-altmann-21696.jpg&fm=jpg">
                 """;
 
-        emailService.sendHtmlMessage(driverEmail, message);
+        try {
+            emailService.sendHtmlMessage(driverEmail, message);
+        } catch (Exception e) {}
 
         return modelMapper.map(savedDriver, DriverRegisterResponseDto.class);
 
+    }
+
+    @Transactional
+    public CarSaveRequestResponse addCarToDriver(String email, CarSaveRequestDto newCar) {
+        Driver driver = getDriverByEmail(email);
+
+        Car car = modelMapper.map(newCar, Car.class);
+
+        car.setCarOwner(driver);
+
+        driver.setCar(car);
+
+        String carName = car.getBrand() + " " + car.getModel();
+
+        emailService.send(driver.getEmail(), "You have successfully added your car with name " + carName + " to driver-app");
+
+        return CarSaveRequestResponse.builder()
+                .driverName(driver.getDriverName())
+                .carName(carName)
+                .build();
+    }
+
+    private Driver getDriverByEmail(String email) {
+        return driverRepository.findDriverByAuthInfoEmail(email)
+                .orElseThrow(() -> new NotFoundException(
+                        String.format("driver with email = %s does not exists", email)
+                ));
+    }
+
+    @Transactional
+    public BankAccountRequestResponse addBankAccount(String email, BankAccountRequestDto newBankAccount) {
+        Driver driver = getDriverByEmail(email);
+
+        BankAccount bankAccount = modelMapper.map(newBankAccount, BankAccount.class);
+
+        driver.setBankAccount(bankAccount);
+
+        emailService.send(
+                driver.getEmail(),
+                "You have successfully added bank account with account number = " + bankAccount.getAccountNumber() + "to your driver-app"
+                );
+
+        return BankAccountRequestResponse.builder()
+                .name(bankAccount.getFullName())
+                .accountNumber(bankAccount.getAccountNumber())
+                .build();
+    }
+
+    public Map<String, String> deleteById(UUID driverId) {
+        Driver driver = driverRepository.findById(driverId)
+                .orElseThrow(() -> new NotFoundException(
+                        String.format("driver with id = %s does not exists", driverId)
+                ));
+
+        driverRepository.deleteById(driverId);
+
+        emailService.send(driver.getEmail(), "Your account deleted, Good luck!!!");
+
+        return Map.of(
+                "status", "SUCCESS"
+        );
     }
 }

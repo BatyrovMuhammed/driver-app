@@ -24,8 +24,6 @@ public class Driver {
 
     private String driverName;
 
-    private String email;
-
     private int experience;
 
     private int rating;
@@ -41,14 +39,18 @@ public class Driver {
             fetch = LAZY)
     private BankAccount bankAccount;
 
-    @OneToOne(cascade = {MERGE, REFRESH},
+    @OneToOne(cascade = {MERGE, REFRESH, PERSIST},
             orphanRemoval = true,
-            fetch = LAZY)
+            fetch = EAGER)
     private AuthInfo authInfo;
 
     @OneToMany(mappedBy = "driver",
             cascade = {MERGE, REFRESH, DETACH},
             orphanRemoval = true)
     private List<Order> orders = new ArrayList<>();
+
+    public String getEmail() {
+        return this.authInfo.getEmail();
+    }
 
 }

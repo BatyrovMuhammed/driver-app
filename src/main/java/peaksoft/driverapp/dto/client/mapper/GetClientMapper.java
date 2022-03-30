@@ -1,4 +1,4 @@
-package peaksoft.driverapp.dto.mapper;
+package peaksoft.driverapp.dto.client.mapper;
 
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;

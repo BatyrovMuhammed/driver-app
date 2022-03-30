@@ -50,5 +50,4 @@ public class ClientApi {
                                     @RequestBody @Valid ClientSaveDto clientSaveDto) {
         return clientService.update(clientId, clientSaveDto);
     }
-
 }

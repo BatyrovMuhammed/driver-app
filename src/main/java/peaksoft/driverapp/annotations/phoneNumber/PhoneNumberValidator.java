@@ -1,4 +1,4 @@
-package peaksoft.driverapp.annotations;
+package peaksoft.driverapp.annotations.phoneNumber;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;

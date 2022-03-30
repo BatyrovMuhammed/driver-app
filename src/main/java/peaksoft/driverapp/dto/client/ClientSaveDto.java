@@ -2,7 +2,7 @@ package peaksoft.driverapp.dto.client;
 
 import lombok.Getter;
 import lombok.Setter;
-import peaksoft.driverapp.annotations.ValidPhoneNumber;
+import peaksoft.driverapp.annotations.phoneNumber.ValidPhoneNumber;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;

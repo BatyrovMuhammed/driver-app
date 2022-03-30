@@ -1,4 +1,4 @@
-package peaksoft.driverapp.dto.mapper;
+package peaksoft.driverapp.dto;
 
 /**
  * @author Beksultan

@@ -6,10 +6,31 @@ spring:
     database-platform: org.hibernate.dialect.PostgreSQL10Dialect
     hibernate:
       ddl-auto: update
-    show-sql: false
+    show-sql: true
+  # email sender
+  mail:
+    host: smtp.gmail.com
+    port: 25
+    username: mailfromspringboot0@gmail.com
+    password: okm9ijnuhb
+    properties:
+      mail:
+        debug: true
+        transport:
+          protocol: smtp
+        smtp:
+          auth: true
+          starttls:
+            enable: true
 server:
   port: 5656
   error:
     include-message: always
 
+# jwt token
+application:
+  jwt:
+    secretKey: java4isthebestgroup
+    tokenPrefix: Bearer
+    expirationDateAfterDays: 30
 

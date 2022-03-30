@@ -1,4 +1,6 @@
-package peaksoft.driverapp.annotations;
+package peaksoft.driverapp.annotations.password;
+
+import peaksoft.driverapp.annotations.phoneNumber.PhoneNumberValidator;
 
 import javax.validation.Constraint;
 import javax.validation.Payload;
@@ -10,9 +12,9 @@ import java.lang.annotation.*;
 @Target({ElementType.METHOD, ElementType.FIELD, ElementType.ANNOTATION_TYPE, ElementType.CONSTRUCTOR, ElementType.PARAMETER, ElementType.TYPE_USE})
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
-@Constraint(validatedBy = PhoneNumberValidator.class)
-public @interface ValidPhoneNumber {
-    String message() default "Invalid phone number";
+@Constraint(validatedBy = PasswordValidator.class)
+public @interface ValidPassword {
+    String message() default "Invalid password";
     Class<?>[] groups() default {};
     Class<? extends Payload>[] payload() default {};
 }

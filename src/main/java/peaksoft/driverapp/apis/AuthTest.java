@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import peaksoft.driverapp.models.entities.AuthInfo;
 
 import java.util.Map;
 
@@ -19,8 +20,10 @@ public class AuthTest {
     @GetMapping("/test")
     @PreAuthorize("hasAnyAuthority('CLIENT', 'DRIVER')")
     public Map<String, String> test(Authentication authentication) {
+        AuthInfo authInfo = (AuthInfo) authentication.getPrincipal();
         return Map.of(
-                "email", authentication.getName()
+                "email", authentication.getName(),
+                "authority", authInfo.getAuthority().name()
         );
     }
 }

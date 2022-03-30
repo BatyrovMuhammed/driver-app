@@ -1,6 +1,7 @@
-package peaksoft.driverapp.dto.mapper;
+package peaksoft.driverapp.dto.client.mapper;
 
 import org.springframework.stereotype.Component;
+import peaksoft.driverapp.dto.Converter;
 import peaksoft.driverapp.dto.client.ClientResponseDto;
 import peaksoft.driverapp.dto.client.ClientSaveDto;
 import peaksoft.driverapp.models.entities.AuthInfo;
@@ -14,7 +15,7 @@ import java.math.BigDecimal;
  * @author Beksultan
  */
 @Component
-public class ClientMapper implements Converter<Client, ClientSaveDto, ClientResponseDto>{
+public class ClientMapper implements Converter<Client, ClientSaveDto, ClientResponseDto> {
     @Override
     public Client convert(ClientSaveDto clientDto) {
         Client client = new Client();

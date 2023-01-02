@@ -1,6 +1,7 @@
 package peaksoft.driverapp.services;
 
 import lombok.AllArgsConstructor;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import peaksoft.driverapp.dto.client.ClientResponseDto;
@@ -92,7 +93,7 @@ public class ClientService {
             return getClientMapper.convert(client);
         }
 
-        throw new BadRequestException("You should write one of {id, email, phonenumber} to get client");
+        throw new BadRequestException("You should write one of {id, email, phoneNumber} to get client");
     }
 
     public void delete(UUID clientId) {

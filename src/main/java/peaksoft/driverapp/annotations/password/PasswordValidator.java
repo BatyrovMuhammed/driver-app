@@ -10,6 +10,6 @@ public class PasswordValidator implements ConstraintValidator<ValidPassword, Str
     @Override
     public boolean isValid(String password,
                            ConstraintValidatorContext constraintValidatorContext) {
-        return password.length() >= 6 && password.length() <= 20;
+        return password.length() >= 6 && password.length() <= 12;
     }
 }

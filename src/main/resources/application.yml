@@ -1,13 +1,15 @@
 spring:
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5678/driver_app
+    url: jdbc:postgresql://localhost:5432/muha
+    username: postgres
+    password: 1234
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQL10Dialect
     hibernate:
-      ddl-auto: update
+      ddl-auto: create
     show-sql: true
-  # email sender
+   #email sender
   mail:
     host: smtp.gmail.com
     port: 25

@@ -10,7 +10,7 @@ import javax.mail.MessagingException;
 import javax.mail.internet.MimeMessage;
 
 /**
- * @author Beksultan
+ * @author B.Muhammed
  */
 @Service
 @AllArgsConstructor

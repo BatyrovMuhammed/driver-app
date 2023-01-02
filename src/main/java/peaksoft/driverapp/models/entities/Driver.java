@@ -12,7 +12,7 @@ import static javax.persistence.CascadeType.*;
 import static javax.persistence.FetchType.*;
 
 /**
- * @author Beksultan
+ * @author B.Muhammed
  */
 @Entity
 @Table(name = "drivers")

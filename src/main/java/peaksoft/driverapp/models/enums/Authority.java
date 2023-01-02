@@ -3,7 +3,7 @@ package peaksoft.driverapp.models.enums;
 import org.springframework.security.core.GrantedAuthority;
 
 /**
- * @author Beksultan
+ * @author B.Muhammed
  */
 public enum Authority implements GrantedAuthority {
     CLIENT,

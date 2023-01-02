@@ -12,7 +12,7 @@ import peaksoft.driverapp.models.entities.AuthInfo;
 import java.util.Date;
 
 /**
- * @author Beksultan
+ * @author B.Muhammed
  */
 @Component
 @AllArgsConstructor

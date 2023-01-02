@@ -5,7 +5,7 @@ import lombok.Getter;
 import java.math.BigDecimal;
 
 /**
- * @author Beksultan
+ * @author B.Muhammed
  */
 @Getter
 public enum CarType {

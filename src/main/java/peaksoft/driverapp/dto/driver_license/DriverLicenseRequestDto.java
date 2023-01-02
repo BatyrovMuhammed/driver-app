@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * @author Beksultan
+ * @author B.Muhammed
  */
 @Getter @Setter
 public class DriverLicenseRequestDto {

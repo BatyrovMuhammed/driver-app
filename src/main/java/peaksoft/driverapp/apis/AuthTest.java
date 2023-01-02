@@ -10,9 +10,6 @@ import peaksoft.driverapp.models.entities.AuthInfo;
 
 import java.util.Map;
 
-/**
- * @author Beksultan
- */
 @RestController
 @RequestMapping("api/auth")
 public class AuthTest {

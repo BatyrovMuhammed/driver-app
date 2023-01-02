@@ -1,7 +1,7 @@
 package peaksoft.driverapp.dto;
 
 /**
- * @author Beksultan
+ * @author B.Muhammed
  */
 public interface Converter <MODEL, REQUEST, RESPONSE>{
 

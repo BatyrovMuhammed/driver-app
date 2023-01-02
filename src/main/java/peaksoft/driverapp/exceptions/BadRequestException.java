@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import static org.springframework.http.HttpStatus.*;
 
 /**
- * @author Beksultan
+ * @author B.Muhammed
  */
 @ResponseStatus(BAD_REQUEST)
 public class BadRequestException extends RuntimeException {

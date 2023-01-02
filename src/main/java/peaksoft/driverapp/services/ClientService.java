@@ -20,9 +20,6 @@ import java.util.UUID;
 
 import static com.google.common.base.Strings.isNullOrEmpty;
 
-/**
- * @author Beksultan
- */
 
 @Service
 @AllArgsConstructor

@@ -25,7 +25,7 @@ import peaksoft.driverapp.models.entities.AuthInfo;
 import peaksoft.driverapp.repositories.AuthInfoRepository;
 
 /**
- * @author Beksultan
+ * @author B.Muhammed
  */
 @Configuration
 @EnableWebSecurity

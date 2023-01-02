@@ -5,9 +5,6 @@ import lombok.Setter;
 import peaksoft.driverapp.models.enums.CarType;
 import peaksoft.driverapp.models.enums.EngineType;
 
-/**
- * @author Beksultan
- */
 @Getter @Setter
 public class CarSaveRequestDto {
     private String brand;

@@ -13,7 +13,7 @@ import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 
 /**
- * @author Beksultan
+ * @author B.Muhammed
  */
 @Getter @Setter
 public class DriverRequestDto {

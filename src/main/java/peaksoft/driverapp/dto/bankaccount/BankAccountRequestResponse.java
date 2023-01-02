@@ -4,9 +4,6 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
-/**
- * @author Beksultan
- */
 @Builder
 @Getter @Setter
 public class BankAccountRequestResponse {

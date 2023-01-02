@@ -13,9 +13,6 @@ import peaksoft.driverapp.services.BankAccountService;
 import java.math.BigDecimal;
 import java.util.Map;
 
-/**
- * @author Beksultan
- */
 @RestController
 @RequestMapping("api/bankAccount")
 @AllArgsConstructor

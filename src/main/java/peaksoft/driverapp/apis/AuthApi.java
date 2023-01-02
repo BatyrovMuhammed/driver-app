@@ -11,9 +11,6 @@ import peaksoft.driverapp.services.AuthService;
 
 import javax.annotation.security.PermitAll;
 
-/**
- * @author Beksultan
- */
 @RestController
 @RequestMapping("/api/authentication")
 @AllArgsConstructor

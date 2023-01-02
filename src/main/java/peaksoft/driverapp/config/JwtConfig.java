@@ -7,9 +7,6 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.http.HttpHeaders;
 import org.springframework.stereotype.Component;
 
-/**
- * @author Beksultan
- */
 @Component
 @Getter @Setter
 @ConfigurationProperties(prefix = "application.jwt")

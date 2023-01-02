@@ -12,7 +12,7 @@ import java.util.UUID;
 import static javax.persistence.CascadeType.*;
 
 /**
- * @author Beksultan
+ * @author B.Muhammed
  */
 @Entity
 @Table(name = "driver_licenses")

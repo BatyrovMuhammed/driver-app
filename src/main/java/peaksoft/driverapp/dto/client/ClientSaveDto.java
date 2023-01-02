@@ -8,7 +8,7 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 
 /**
- * @author Beksultan
+ * @author B.Muhammed
  */
 @Getter @Setter
 public class ClientSaveDto {

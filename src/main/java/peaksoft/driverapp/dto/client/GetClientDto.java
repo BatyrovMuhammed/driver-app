@@ -6,7 +6,7 @@ import lombok.Setter;
 import java.util.UUID;
 
 /**
- * @author Beksultan
+ * @author B.Muhammed
  */
 @Getter @Setter
 public class GetClientDto {

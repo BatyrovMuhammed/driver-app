@@ -11,9 +11,6 @@ import peaksoft.driverapp.models.entities.Client;
 
 import java.math.BigDecimal;
 
-/**
- * @author Beksultan
- */
 @Component
 public class ClientMapper implements Converter<Client, ClientSaveDto, ClientResponseDto> {
     @Override

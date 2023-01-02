@@ -3,9 +3,6 @@ package peaksoft.driverapp.annotations.phoneNumber;
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 
-/**
- * @author Beksultan
- */
 public class PhoneNumberValidator implements ConstraintValidator<ValidPhoneNumber, String> {
 
     @Override

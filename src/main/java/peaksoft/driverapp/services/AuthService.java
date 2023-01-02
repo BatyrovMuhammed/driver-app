@@ -11,7 +11,7 @@ import peaksoft.driverapp.dto.auth.AuthResponse;
 import peaksoft.driverapp.jwt.JwtUtils;
 
 /**
- * @author Beksultan
+ * @author B.Muhammed
  */
 @Service
 @AllArgsConstructor

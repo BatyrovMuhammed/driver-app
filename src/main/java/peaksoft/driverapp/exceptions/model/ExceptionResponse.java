@@ -5,7 +5,7 @@ import lombok.Setter;
 import org.springframework.http.HttpStatus;
 
 /**
- * @author Beksultan
+ * @author B.Muhammed
  */
 @Getter @Setter
 public class ExceptionResponse {

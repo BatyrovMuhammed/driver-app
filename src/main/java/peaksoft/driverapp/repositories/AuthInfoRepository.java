@@ -8,7 +8,7 @@ import java.util.Optional;
 import java.util.UUID;
 
 /**
- * @author Beksultan
+ * @author B.Muhammed
  */
 @Repository
 public interface AuthInfoRepository extends JpaRepository<AuthInfo, UUID> {

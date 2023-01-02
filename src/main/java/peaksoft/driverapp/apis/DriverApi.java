@@ -18,9 +18,6 @@ import javax.validation.Valid;
 import java.util.Map;
 import java.util.UUID;
 
-/**
- * @author Beksultan
- */
 @RestController
 @RequestMapping("api/drivers")
 @AllArgsConstructor

@@ -13,7 +13,7 @@ import peaksoft.driverapp.exceptions.model.ExceptionResponse;
 import java.util.Map;
 
 /**
- * @author Beksultan
+ * @author B.Muhammed
  */
 @RestControllerAdvice
 public class GlobalExceptionHandler {

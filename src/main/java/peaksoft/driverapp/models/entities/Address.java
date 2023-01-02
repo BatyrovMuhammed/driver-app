@@ -7,7 +7,7 @@ import javax.persistence.*;
 import java.util.UUID;
 
 /**
- * @author Beksultan
+ * @author B.Muhammed
  */
 @Entity
 @Table(name = "addresses")

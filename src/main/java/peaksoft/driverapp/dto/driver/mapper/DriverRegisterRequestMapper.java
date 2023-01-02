@@ -8,7 +8,7 @@ import peaksoft.driverapp.models.enums.Authority;
 import peaksoft.driverapp.models.entities.Driver;
 
 /**
- * @author Beksultan
+ * @author B.Muhammed
  */
 @Component
 public class DriverRegisterRequestMapper implements Converter<DriverRequestDto, Driver> {

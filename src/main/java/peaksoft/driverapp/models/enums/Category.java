@@ -1,7 +1,7 @@
 package peaksoft.driverapp.models.enums;
 
 /**
- * @author Beksultan
+ * @author B.Muhammed
  */
 public enum Category {
     A,

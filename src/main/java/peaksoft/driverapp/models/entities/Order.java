@@ -11,7 +11,7 @@ import static javax.persistence.CascadeType.*;
 import static peaksoft.driverapp.models.enums.CarType.*;
 
 /**
- * @author Beksultan
+ * @author B.Muhammed
  */
 @Entity
 @Table(name = "orders")

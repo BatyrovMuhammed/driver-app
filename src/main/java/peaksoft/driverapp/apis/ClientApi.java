@@ -12,9 +12,6 @@ import javax.validation.Valid;
 import java.util.List;
 import java.util.UUID;
 
-/**
- * @author Beksultan
- */
 @RestController
 @RequestMapping("api/clients")
 @AllArgsConstructor

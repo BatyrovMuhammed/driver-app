@@ -5,9 +5,6 @@ import org.springframework.stereotype.Component;
 import peaksoft.driverapp.dto.client.GetClientDto;
 import peaksoft.driverapp.models.entities.Client;
 
-/**
- * @author Beksultan
- */
 @Component
 public class GetClientMapper implements Converter<Client, GetClientDto> {
     @Override

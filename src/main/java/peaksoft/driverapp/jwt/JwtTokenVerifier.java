@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * @author Beksultan
+ * @author B.Muhammed
  */
 @AllArgsConstructor
 public class JwtTokenVerifier extends OncePerRequestFilter {
